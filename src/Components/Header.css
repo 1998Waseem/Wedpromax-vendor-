@@ -1,0 +1,29 @@
+.logoname .span1{
+   color:#E53935;
+   font-size: 26px;
+   font-weight: 800;
+}
+
+.logoname .span2{
+    color:#1E88E5;
+   font-size: 26px;
+   font-weight: 800;
+}
+
+.logoname .span3{
+    color:#E3A400;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+ul.navbar-nav.me-auto.mb-2.mb-lg-0 {
+    margin: 0px auto;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 70px;
+}
+
+.headerbar{
+    background: #F5F5F5 !important;
+}

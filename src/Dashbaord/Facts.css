@@ -1,0 +1,17 @@
+.counternumber {
+    font-size: 25px !important;
+    font-weight: 600;
+}
+
+.countertext{
+    text-align: left !important;
+    font-size: 13px;
+    font-weight: regular;
+    
+}
+
+.text-secondary.small {
+    position: relative;
+    right: 20px;
+}
+

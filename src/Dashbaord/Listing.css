@@ -1,0 +1,98 @@
+.addhallbtn{
+    width: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 40px;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+}
+.social_icons{
+    margin-top: 40px;
+    
+}
+.packages{
+    background: #eeee;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.packages span{
+    font-size: 12px;
+    margin-left: 8px;
+
+}
+
+.fb{
+    background: #eeee;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.fb span{
+    font-size: 12px;
+    margin-left: 8px;
+
+}
+
+.insta{
+    background: #eeee;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.insta span{
+    font-size: 12px;
+    margin-left: 8px;
+
+}
+
+.whatsapp{
+    background: #eeee;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.whatsapp span{
+    font-size: 12px;
+    margin-left: 8px;
+
+}
+
+.hname{
+    font-size: 22px;
+    font-weight: 500;
+}
+.activetab{
+    font-size: 17px;
+    font-weight: 600;
+    color: #000;
+}
+
+.nonactivetab{
+    font-size: 15px;
+    font-weight: 600;
+    color: #808080;
+}
+
+.price{
+    margin-right: 20px;
+}
+
+.deleteicon{
+    font-size: 20px;
+    color:#E53935;
+}
+
+.nextbtn{
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 40px;
+}
+
+.addpackbtn{
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 40px;
+}
