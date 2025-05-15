@@ -96,3 +96,26 @@
     padding-right: 20px;
     border-radius: 40px;
 }
+
+.images{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: 1px solid;
+    border-radius: 20px;
+}
+
+.images .hallimg{
+    font-size: 30px;
+}
+
+.images p{
+    font-size: 13px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.yellowimgicon {
+    font-size: 35px;
+    color: #E3A400;
+    margin-right: 10px;
+}

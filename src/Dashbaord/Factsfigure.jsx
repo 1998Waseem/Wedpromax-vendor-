@@ -152,17 +152,15 @@ export default function Factsfigure() {
   ]
 
   return (
+    <div className="card rounded-4 shadow-sm h-100">
+                <div className="card-body p-4">
+
+                
     <div className="container bg-light min-vh-100 p-0">
       <div className="row g-0">
-        {/* Sidebar */}
-        <div className="col-md-4 col-lg-3 bg-white shadow-sm rounded-end-4 p-4 d-flex flex-column"
-          style={{ minHeight: "100vh" }}
-        >
-          <Siderbar />
-        </div>
 
         {/* Main Content */}
-        <div className="col-md-8 col-lg-9 p-4">
+        <div className="col-md-12 col-lg-12 p-4">
           <div className="bg-white rounded-4 p-4 shadow-sm">
             {/* Header */}
             <div className="d-flex justify-content-between align-items-center mb-4">
@@ -450,6 +448,8 @@ export default function Factsfigure() {
           </div>
         </div>
       </div>
+    </div>
+    </div>
     </div>
   )
 }

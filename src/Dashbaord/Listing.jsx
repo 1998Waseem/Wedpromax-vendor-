@@ -14,6 +14,8 @@ import { IoIosPricetag } from "react-icons/io";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
+import { IoImageOutline } from "react-icons/io5";
+
 
 
 
@@ -28,7 +30,8 @@ const Listing = () => {
     const [showaddhotelmodel, setShowAddhotelModel] = useState(false);
     const [pack, setPack] = useState('Basic');
     const [showaddpackagemodel, setShowAddpackageModel] = useState(false);
-    const [menubuilder, setMenuBuilder] = useState('Cuisine');
+    const [menubuilder, setMenuBuilder] = useState('cuisine');
+    const [uploadimgmodal, setUploadImgmodal] = useState(false)
 
     const cuisine = [
         { id: 1, dishname: "Biryani", price: "999" },
@@ -64,15 +67,46 @@ const Listing = () => {
         { id: 7, no1: "Air Condition", price: "999" },
     ];
 
+    const addhallimg = [
+        {
+            id: 1,
+            "img": <IoImageOutline />,
+            "desc1": "Drag & Drop a photo or",
+            "desc2": "Browse",
+
+            id: 2,
+            "img": <IoImageOutline />,
+            "desc1": "Drag & Drop a photo or",
+            "desc2": "Browse",
+
+            id: 3,
+            "img": <IoImageOutline />,
+            "desc1": "Drag & Drop a photo or",
+            "desc2": "Browse",
+
+            id: 4,
+            "img": <IoImageOutline />,
+            "desc1": "Drag & Drop a photo or",
+            "desc2": "Browse",
+
+            id: 5,
+            "img": <IoImageOutline />,
+            "desc1": "Drag & Drop a photo or",
+            "desc2": "Browse",
+
+            id: 6,
+            "img": <IoImageOutline />,
+            "desc1": "Drag & Drop a photo or",
+            "desc2": "Browse",
+        }
+    ]
+
     return (
-        <>
+        <><div className="card rounded-4 shadow-sm h-100">
+                <div className="card-body p-4">
             <div className='container'>
                 <div className="row">
-                    <div className="col-md-4 col-lg-3 bg-white shadow-sm rounded-end-4 p-4 d-flex flex-column" style={{ minHeight: "100vh" }}>
-                        <Siderbar />
-                    </div>
-                    <div className="col-md-8 col-lg-9 p-4">
-                        <div className='rounded-4 p-4 shadow-sm'>
+                    <div className="col-md-12 col-lg-12 p-4">
                             <div className='title'>
                                 <h4>My Listing</h4>
                                 <button className='btn btn-primary addhallbtn' onClick={() => setShowAddhotelModel(true)}>+ Add Hall</button>
@@ -305,7 +339,7 @@ const Listing = () => {
                                 pack === "Basic" && (
                                     <>
                                         <div className='row'>
-                                            
+
                                             <div className='col-md-1'></div>
                                             <div className='col-md-11'>
                                                 <h5 className='mb-2 mt-2'>Menu Builder</h5>
@@ -392,8 +426,8 @@ const Listing = () => {
                                                         </div>
                                                     </div>
                                                     <hr />
-                                                  <div className='row'>
-                                                    <div className='col-md-1'></div>
+                                                    <div className='row'>
+                                                        <div className='col-md-1'></div>
                                                         <div className='col-md-11'>
                                                             <h5 className='mb-2 mt-2'>Extra Services</h5>
                                                             <div className='menuprice d-flex flex-wrap gap-5'>
@@ -427,15 +461,15 @@ const Listing = () => {
                                                     <div className='row'>
                                                         <div className='col-md-1'></div>
                                                         <div className='col-md-11'>
-                                                        <h5 className='mb-2 mt-5'>Package Price</h5>
-                                                        <input type='number' className='form-control mt-2 mb-2' style={{width:"90%"}}></input>
+                                                            <h5 className='mb-2 mt-5'>Package Price</h5>
+                                                            <input type='number' className='form-control mt-2 mb-2' style={{ width: "90%" }}></input>
                                                         </div>
                                                     </div>
 
                                                     <div className='row'>
                                                         <div className='col-md-1'></div>
                                                         <div className='col-md-11 text-center'>
-                                                        <button className='btn btn-primary mt-4 mb-3 addpackbtn'>Add</button>
+                                                            <button className='btn btn-primary mt-4 mb-3 addpackbtn' onClick={() => { setShowAddpackageModel(false); setUploadImgmodal(true) }}>Add</button>
                                                         </div>
                                                     </div>
 
@@ -466,6 +500,99 @@ const Listing = () => {
                     </div>
                 </div>
             )}
+
+            {uploadimgmodal && (
+                <div className="modal fade show d-block" tabIndex="-1" role="dialog" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
+                    <div className="modal-dialog modal-dialog-centered" role="document">
+                        <div className="modal-content">
+
+                            <div className="modal-body">
+                                <h5 className='text-center mt-3'>&nbsp; &nbsp; Add Hall</h5>
+
+                                <div className='container'>
+                                   <div className='row mt-3 mb-3'>
+                                    <p><IoImageOutline className='yellowimgicon'/> Upload up to 6 images</p>
+                                    <div className="col-md-4  text-center">
+                                        <div className="images">
+                                        <IoImageOutline className='hallimg'/>
+                                        <p>Drag & Drop a photo or <span className='text-primary'>Browse</span></p>
+                                        </div>
+                                       
+                                    </div>
+                                    <div className="col-md-4 text-center">
+                                    <div className="images">
+                                        <IoImageOutline className='hallimg'/>
+                                        <p>Drag & Drop a photo or <span className='text-primary'>Browse</span></p>
+                                        </div>
+                                       
+                                    </div>
+                                    <div className="col-md-4 text-center">
+                                    <div className="images">
+                                        <IoImageOutline className='hallimg'/>
+                                        <p>Drag & Drop a photo or <span className='text-primary'>Browse</span></p>
+                                        </div>
+                                    </div>
+                                   </div>
+                                   <div className='row mt-3 mb-3'>
+                                    <div className="col-md-4 text-center">
+                                    <div className="images">
+                                        <IoImageOutline className='hallimg'/>
+                                        <p>Drag & Drop a photo or <span className='text-primary'>Browse</span></p>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-4 text-center">
+                                    <div className="images">
+                                        <IoImageOutline className='hallimg'/>
+                                        <p>Drag & Drop a photo or <span className='text-primary'>Browse</span></p>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-4 text-center">
+                                    <div className="images">
+                                        <IoImageOutline className='hallimg'/>
+                                        <p>Drag & Drop a photo or <span className='text-primary'>Browse</span></p>
+                                        </div>
+                                    </div>
+                                   </div>
+                                    </div>
+
+                                    <div className='container'>
+                                   <div className='row mt-3 mb-3'>
+                                   <p>Video ( Only 1)</p>
+                                    <div className="col-md-4  text-center">
+                                        <div className="images">
+                                        <IoImageOutline className='hallimg'/>
+                                        <p>Drag & Drop a photo or <span className='text-primary'>Browse</span></p>
+                                        </div>
+                                       
+                                    </div>
+                                    <div className="col-md-4 text-center">
+                                    
+                                       
+                                    </div>
+                                    <div className="col-md-4 text-center">
+                                   
+                                    </div>
+                                   </div>
+
+                                   <div className='row mt-4 mb-3'>
+                                  
+                                    <div className="col-md-4  text-center">
+                                       
+                                    </div>
+                                    <div className="col-md-4 text-center">
+                                    <button class="btn btn-primary w-100 nextbtn" onClick={()=>setUploadImgmodal(false)}>Next</button>
+                                   </div>
+                                    <div className="col-md-4 text-center">
+                                   
+                                    </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+            )}
+            </div>
         </>
     );
 };

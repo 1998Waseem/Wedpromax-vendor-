@@ -85,6 +85,9 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Hexagon, User, Calendar, MessageSquare, Star, ChevronRight } from 'lucide-react';
 import './Siderbar.css';
+import { FaBookmark } from "react-icons/fa";
+import { GoPackage } from "react-icons/go";
+
 
 const menuItems = [
   { label: 'Analytics', icon: Hexagon, path: '/analytics' },
@@ -92,11 +95,15 @@ const menuItems = [
   { label: 'Calendar View', icon: Calendar, path: '/calendarview' },
   { label: 'Messages', icon: MessageSquare, path: '/messages' },
   { label: 'Reviews', icon: Star, path: '/reviews' },
+  { label: 'Customer Bookings', icon:FaBookmark , path:'/history'},
+  { label: 'Subscription Plan', icon:GoPackage , path:'/Packages'}
 ];
 
 const Siderbar = () => {
   return (
     <>
+    <div className="card rounded-4 shadow-sm h-100">
+    <div className="card-body p-4">
       <div className="d-flex align-items-center mb-5">
         <Hexagon className="me-2" />
         <h5 className="mb-0 fw-bold">Dashboard</h5>
@@ -121,6 +128,8 @@ const Siderbar = () => {
             </NavLink>
           </div>
         ))}
+      </div>
+      </div>
       </div>
     </>
   );
