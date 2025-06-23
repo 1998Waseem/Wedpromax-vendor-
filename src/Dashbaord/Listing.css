@@ -119,3 +119,7 @@
     color: #E3A400;
     margin-right: 10px;
 }
+
+input.form-control{
+    border: 1px solid #000;
+}

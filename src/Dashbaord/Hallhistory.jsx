@@ -1,6 +1,6 @@
 import React from 'react'
 import { IoIosSearch } from "react-icons/io";
-
+import './Hallhistory.css'
 
 const Hallhistory = () => {
     const bookings = [
@@ -134,34 +134,34 @@ const Hallhistory = () => {
                                 </div>
                             </div>
                             <div className="table-responsive">
-              <table className="table mt-3">
+              <table className="table mt-3 custom-table-bg">
                 <thead>
-                  <tr className="text-secondary">
-                    <th>Sr No.</th>
-                    <th>Customer</th>
-                    <th>Event Date and Time</th>
-                    <th>Booking Date</th>
-                    <th>Hall Name</th>
-                    <th>Package</th>
-                    <th>Total Amount</th>
-                    <th>Status</th>
+                  <tr className="" style={{background:"#F5F5F5"}}>
+                    <th style={{background:"#F5F5F5"}}>Sr No.</th>
+                    <th style={{background:"#F5F5F5"}}>Customer</th>
+                    <th style={{background:"#F5F5F5"}}>Event Date and Time</th>
+                    <th style={{background:"#F5F5F5"}}>Booking Date</th>
+                    <th style={{background:"#F5F5F5"}}>Hall Name</th>
+                    <th style={{background:"#F5F5F5"}}>Package</th>
+                    <th style={{background:"#F5F5F5"}}>Total Amount</th>
+                    <th style={{background:"#F5F5F5"}}>Status</th>
                   </tr>
                 </thead>
                 <tbody>
                   {bookings.map((booking) => (
                     <tr key={booking.id}>
-                      <td>{booking.id}</td>
-                      <td>{booking.customer}</td>
-                      <td>
+                      <td style={{background:"#F5F5F5"}}>{booking.id}</td>
+                      <td style={{background:"#F5F5F5"}}>{booking.customer}</td>
+                      <td style={{background:"#F5F5F5"}}>
                         {booking.eventDate}
                         <br />
                         <small className="text-secondary">{booking.eventTime}</small>
                       </td>
-                      <td>{booking.bookingDate}</td>
-                      <td>{booking.hallName}</td>
-                      <td>{booking.package}</td>
-                      <td>{booking.amount}</td>
-                      <td>
+                      <td style={{background:"#F5F5F5"}}>{booking.bookingDate}</td>
+                      <td style={{background:"#F5F5F5"}}>{booking.hallName}</td>
+                      <td style={{background:"#F5F5F5"}}>{booking.package}</td>
+                      <td style={{background:"#F5F5F5"}}>{booking.amount}</td>
+                      <td style={{background:"#F5F5F5"}}>
                         <span
                           className={`badge ${booking.status === "Confirmed" ? "bg-success-subtle text-success" : "bg-danger-subtle text-danger"} px-3 py-2 rounded-pill`}
                         >

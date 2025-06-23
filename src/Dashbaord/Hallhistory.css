@@ -1,0 +1,15 @@
+.custom-table-bg{
+  background-color: #F5F5F5 !important;
+}
+
+th {
+    font-size: 13px;
+    font-weight: 500;
+    color: #B5B7C0 !important;
+}
+
+td {
+    font-size: 13px;
+    font-weight: 500;
+    color: #000;
+}

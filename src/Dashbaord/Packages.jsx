@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import { Calendar } from "lucide-react"
 import { FaCircleCheck } from "react-icons/fa6";
+import './Packages.css';
 
 const Packages = () => {
     const [billingCycle, setBillingCycle] = useState("monthly")
@@ -27,9 +28,9 @@ const Packages = () => {
       name: "Standard Package",
       price: "PKR 85,000",
       menu: [
-        { item: "Cuisine", details: "Biryani, Biryani, Biryani" },
-        { item: "Drinks", details: "Biryani, Biryani, Biryani" },
-        { item: "Dessert", details: "Biryani, Biryani, Biryani" },
+        { item: "Cuisine", details: "Biryani" },
+        { item: "Drinks", details: "Biryani" },
+        { item: "Dessert", details: "Biryani" },
       ],
       amenities: ["Photography", "Music", "Decoration", "Venue Setup"],
     },
@@ -38,43 +39,51 @@ const Packages = () => {
       name: "Premium Package",
       price: "PKR 85,000",
       menu: [
-        { item: "Cuisine", details: "Biryani, Biryani, Biryani, Biryani" },
-        { item: "Drinks", details: "Biryani, Biryani, Biryani, Biryani" },
-        { item: "Dessert", details: "Biryani, Biryani, Biryani, Biryani" },
+        { item: "Cuisine", details: "Biryani, Biryani" },
+        { item: "Drinks", details: "Biryani, Biryani" },
+        { item: "Dessert", details: "Biryani, Biryani" },
       ],
       amenities: ["Photography", "Music", "Decoration", "Venue Setup", "Event Coordination"],
     },
   ]
     return (
         <>
-            <div className="card rounded-4 shadow-sm h-100">
+            <div className="card rounded-4 shadow-sm h-100" style={{background:"#F5F5F5"}}>
                 <div className="card-body p-4">
-                <div className="container py-5 bg-light rounded-3">
+                <div className="container py-5 rounded-3">
       <div className="row justify-content-center">
         <div className="col-md-10">
-          <h2 className="fw-bold mb-4 text-center">Our Pricing Plans</h2>
+          <h2 className="fw-bold mb-4 text-left" style={{fontSize:"20px",fontWeight:"600"}}>Our Pricing Plans</h2>
 
           <h3 className="text-center text-primary mb-4">Choose Your Plan</h3>
 
-          {/* Billing toggle */}
-          <div className="d-flex justify-content-center mb-5">
-            <div className="btn-group" role="group" aria-label="Billing cycle">
-              <button
-                type="button"
-                className={`btn ${billingCycle === "monthly" ? "btn-primary" : "btn-outline-primary"}`}
-                onClick={() => setBillingCycle("monthly")}
-              >
-                Monthly
-              </button>
-              <button
-                type="button"
-                className={`btn ${billingCycle === "yearly" ? "btn-primary" : "btn-outline-primary"}`}
-                onClick={() => setBillingCycle("yearly")}
-              >
-                Yearly (Save 2.5%)
-              </button>
+
+           <div className="container">
+            <div className="row">
+              <div className="col-md-3"></div>
+              <div className="col-md-6">
+                {/* Toggle Tabs */}
+                <div className="d-flex mb-4 p-1 border rounded-pill ">
+                    <button
+                        className={`btn flex-fill rounded-pill rbpbtn ${billingCycle === 'monthly' ? 'btn-primary text-white' : 'btn-light'
+                            }`}
+                         onClick={() => setBillingCycle("monthly")}
+                    >
+                        Monthly
+                    </button>
+                    <button
+                        className={`btn flex-fill rounded-pill swtbtn ${billingCycle === 'yearly' ? 'btn-primary text-white' : 'btn-light'
+                            }`}
+                       onClick={() => setBillingCycle("yearly")}
+                    >
+                        Yearly (Save 2.5%)
+                    </button>
+                </div>
+              </div>
+              <div className="col-md-3"></div>
+
             </div>
-          </div>
+           </div>
 
           {/* Packages accordion */}
           <div className="accordion shadow-sm rounded-3 bg-white" id="pricingAccordion">
@@ -93,9 +102,9 @@ const Packages = () => {
                         <div className="bg-primary p-2 rounded me-3 text-white">
                           <Calendar size={24} />
                         </div>
-                        <span className="fw-bold">{pkg.name}</span>
+                        <span className="fw-bold pn">{pkg.name}</span>
                       </div>
-                      <span className="fw-bold">{pkg.price}</span>
+                      <span className="fw-bold pp">{pkg.price}</span>
                     </div>
                   </button>
                 </h2>
@@ -113,8 +122,8 @@ const Packages = () => {
                         <ul className="list-unstyled">
                           {pkg.menu.map((menuItem, i) => (
                             <li key={i} className="mb-3 d-flex align-items-start">
-                              <FaCircleCheck style={{color:"#0D6EFD"}}/>&nbsp;
-                              <div>
+                              <FaCircleCheck style={{color:"#0D6EFD",fontSize:"30px"}}/>&nbsp;
+                              <div style={{position:"relative",right:"-10px",top:"2px"}}>
                                 <strong>{menuItem.item}:</strong> {menuItem.details}
                               </div>
                             </li>
@@ -128,9 +137,9 @@ const Packages = () => {
                           {pkg.amenities.map((amenity, i) => (
                             <li key={i} className="mb-3 d-flex align-items-start">
                               
-                                <FaCircleCheck style={{color:"#0D6EFD"}}/>&nbsp;
+                                <FaCircleCheck style={{color:"#0D6EFD",fontSize:"30px"}}/>&nbsp;
                               
-                              {amenity}
+                             <p style={{position:"relative",right:"-10px",top:"2px"}}>{amenity}</p>
                             </li>
                           ))}
                         </ul>

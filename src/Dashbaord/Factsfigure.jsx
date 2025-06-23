@@ -31,12 +31,43 @@ export default function Factsfigure() {
     { day: "S", value: 80 },
   ]
 
-  // Sample notifications
-  const notifications = [
-    { id: 1, icon: "🔔", title: "New Booking.", time: "Just now" },
-    { id: 2, icon: "👤", title: "New user registered.", time: "59 minutes ago" },
-    { id: 3, icon: "👁️", title: "Someone viewed your profile", time: "12 hours ago" },
-    { id: 4, icon: "📣", title: "Andi Lane starting Follow you.", time: "Today, 11:59 AM" },
+  // // Sample notifications
+  // const notifications = [
+  //   { id: 1, icon: "🔔", title: "New Booking.", time: "Just now" },
+  //   { id: 2, icon: "👤", title: "New user registered.", time: "59 minutes ago" },
+  //   { id: 3, icon: "👁️", title: "Someone viewed your profile", time: "12 hours ago" },
+  //   { id: 4, icon: "📣", title: "Andi Lane starting Follow you.", time: "Today, 11:59 AM" },
+  // ]
+
+  const notificationsData = [
+    {
+      id: 1,
+      icon: "bug",
+      iconColor: "#FFC107",
+      message: "New Booking.",
+      time: "Just now",
+    },
+    {
+      id: 2,
+      icon: "person",
+      iconColor: "#0D6EFD",
+      message: "New user registered.",
+      time: "59 minutes ago",
+    },
+    {
+      id: 3,
+      icon: "bug",
+      iconColor: "#FFC107",
+      message: "Someone viewed your profile",
+      time: "12 hours ago",
+    },
+    {
+      id: 4,
+      icon: "broadcast",
+      iconColor: "#FFC107",
+      message: "Andi Lane starting Follow you.",
+      time: "Today, 11:59 AM",
+    },
   ]
 
   const leaderboard = [
@@ -152,304 +183,329 @@ export default function Factsfigure() {
   ]
 
   return (
-    <div className="card rounded-4 shadow-sm h-100">
-                <div className="card-body p-4">
-
-                
-    <div className="container bg-light min-vh-100 p-0">
-      <div className="row g-0">
-
-        {/* Main Content */}
-        <div className="col-md-12 col-lg-12 p-4">
-          <div className="bg-white rounded-4 p-4 shadow-sm">
-            {/* Header */}
-            <div className="d-flex justify-content-between align-items-center mb-4">
-              <div className="d-flex">
-                <button
-                  className={`btn ${activeTab === "stats" ? "btn-dark" : "btn-light"} me-2`}
-                  onClick={() => setActiveTab("stats")}
-                >
-                  Stats By Hall
-                </button>
-                <button
-                  className={`btn ${activeTab === "leaderboard" ? "btn-dark" : "btn-light"}`}
-                  onClick={() => setActiveTab("leaderboard")}
-                >
-                  Leaderboard
-                </button>
+    <div className="card rounded-4 shadow-sm h-100" style={{ background: "#F5F5F5" }}>
+      <div className="card-body p-4">
 
 
-              </div>
+        <div className="container min-vh-100 p-0">
+          <div className="row g-0">
 
-              <div className="dropdown">
-                <select className="form-select" aria-label="Default select example">
-                  <option selected>6 Months</option>
-                  <option value="24">1 year</option>
-                  <option value="48">2years</option>
+            {/* Main Content */}
+            <div className="col-md-12 col-lg-12 p-4">
 
-                </select>
-              </div>
-
-            </div>
-
-            
-
-            {
-              activeTab === "stats" && (<>
+              {/* Header */}
               <div className="d-flex justify-content-between align-items-center mb-4">
-              <div className="d-flex">
-                <select className="form-select" aria-label="Default select example">
-                  <option selected>Hotel Taj</option>
-                  <option value="hr">Hotel Royal</option>
-                  <option value="hg">Hotel Grand</option>
-
-                </select>
-                <button style={{ display: "none" }}
-                  className={`btn ${activeTab === "leaderboard" ? "btn-dark" : "btn-light"}`}
-                  onClick={() => setActiveTab("leaderboard")}
-                >
-                  Leaderboard
-                </button>
-              </div>
-
-              <div className="d-flex align-items-center">
-                <div className="dropdown me-3">
-                  <button style={{ display: "none" }}
-                    className="btn btn-outline-secondary dropdown-toggle"
-                    type="button"
-                    id="hotelDropdown"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
+                <div className="d-flex">
+                  <button
+                    className={`btn ${activeTab === "stats" ? "btn-dark" : "btn-light"} me-2`}
+                    onClick={() => setActiveTab("stats")}
                   >
-                    Hotel Taj
+                    Stats By Hall
                   </button>
-                  <ul className="dropdown-menu" aria-labelledby="hotelDropdown">
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Hotel Taj
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Hotel Royal
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Hotel Grand
-                      </a>
-                    </li>
-                  </ul>
+                  <button
+                    className={`btn ${activeTab === "leaderboard" ? "btn-dark" : "btn-light"}`}
+                    onClick={() => setActiveTab("leaderboard")}
+                  >
+                    Leaderboard
+                  </button>
+
+
                 </div>
 
                 <div className="dropdown">
-                  <button style={{ display: "none" }}
-                    className="btn btn-outline-secondary dropdown-toggle"
-                    type="button"
-                    id="timeDropdown"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    6 months
-                  </button>
-                  <ul className="dropdown-menu" aria-labelledby="timeDropdown">
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        3 months
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        6 months
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        1 year
-                      </a>
-                    </li>
-                  </ul>
+                  <select className="form-select" aria-label="Default select example">
+                    <option selected>6 Months</option>
+                    <option value="24">1 year</option>
+                    <option value="48">2years</option>
+
+                  </select>
                 </div>
+
+              </div>
+
+
+
+              {
+                activeTab === "stats" && (<>
+                  <div className="d-flex justify-content-between align-items-center mb-4">
+                    <div className="d-flex">
+                      <select className="form-select" aria-label="Default select example">
+                        <option selected>Hotel Taj</option>
+                        <option value="hr">Hotel Royal</option>
+                        <option value="hg">Hotel Grand</option>
+
+                      </select>
+                      <button style={{ display: "none" }}
+                        className={`btn ${activeTab === "leaderboard" ? "btn-dark" : "btn-light"}`}
+                        onClick={() => setActiveTab("leaderboard")}
+                      >
+                        Leaderboard
+                      </button>
+                    </div>
+
+                    <div className="d-flex align-items-center">
+                      <div className="dropdown me-3">
+                        <button style={{ display: "none" }}
+                          className="btn btn-outline-secondary dropdown-toggle"
+                          type="button"
+                          id="hotelDropdown"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Hotel Taj
+                        </button>
+                        <ul className="dropdown-menu" aria-labelledby="hotelDropdown">
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              Hotel Taj
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              Hotel Royal
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              Hotel Grand
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div className="dropdown">
+                        <button style={{ display: "none" }}
+                          className="btn btn-outline-secondary dropdown-toggle"
+                          type="button"
+                          id="timeDropdown"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          6 months
+                        </button>
+                        <ul className="dropdown-menu" aria-labelledby="timeDropdown">
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              3 months
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              6 months
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              1 year
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Stats Cards */}
+                  <div className="row g-4 mb-4">
+                    <div className="col-md-6 col-lg-3">
+                      <div className="rounded-4 p-3 statscol" style={{ background: "#E6F1FD !important" }}>
+                        <div className="text-secondary mb-2 countertext">Views</div>
+                        <div className="d-flex align-items-center justify-content-between">
+                          <h2 className="mb-0 fw-bold ">
+                            <CountUp end={7265} duration={2.5} separator="," className="counternumber" />
+                          </h2>
+                          <div className="d-flex align-items-center text-dark">
+                            {/* <ArrowUpRight size={16} /> */}
+                            <span>+11.01%</span>
+                            <img src={upwordicon} alt="upwordicon" className='upwordicon' />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="col-md-6 col-lg-3">
+                      <div className="rounded-4 p-3 statscol" style={{ background: "#E6F1FD !important" }}>
+                        <div className="text-secondary mb-2 countertext">Hits</div>
+                        <div className="d-flex align-items-center justify-content-between">
+                          <h2 className="mb-0 fw-bold">
+                            <CountUp end={3671} duration={2.5} separator="," className="counternumber" />
+                          </h2>
+                          <div className="d-flex align-items-center text-dark">
+                            {/* <ArrowDownRight size={16} /> */}
+                            <span>-0.03%</span>
+                            <img src={downwordicon} alt="downwordicon" className='downwordicon' />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="col-md-6 col-lg-3">
+                      <div className="rounded-4 p-3 statscol" style={{ background: "#E6F1FD !important" }}>
+                        <div className="text-secondary mb-2 countertext">Total Profit</div>
+                        <div className="d-flex align-items-center justify-content-between">
+                          <h2 className="mb-0 fw-bold">
+                            <CountUp end={156} duration={2.5} separator="," className="counternumber" />
+                          </h2>
+                          <div className="d-flex align-items-center text-dark">
+                            <span>+15.03%</span>
+                            {/* <ArrowUpRight size={16} /> */}
+                            <img src={downwordicon} alt="downwordicon" className='downwordicon' />
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="col-md-6 col-lg-3">
+                      <div className="rounded-4 p-3 statscol" >
+                        <div className="text-secondary mb-2 countertext">Total Bookings</div>
+                        <div className="d-flex align-items-center justify-content-between">
+                          <h2 className="mb-0 fw-bold">
+                            <CountUp end={2318} duration={2.5} separator="," className="counternumber" />
+                          </h2>
+                          <div className="d-flex align-items-center text-dark">
+                            {/* <ArrowUpRight size={16} /> */}
+                            <span>+6.08%</span>
+                            <img src={upwordicon} alt="upwordicon" className='upwordicon' />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Line Chart */}
+                  <div className="bg-white rounded-4 p-3 mb-4">
+                    <div style={{ height: "300px" }}>
+                      <ResponsiveContainer width="100%" height="100%">
+                        <LineChart data={lineData} margin={{ top: 20, right: 30, left: 20, bottom: 10 }}>
+                          <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                          <XAxis dataKey="name" axisLine={false} tickLine={false} />
+                          <YAxis axisLine={false} tickLine={false} domain={[0, 30000]} ticks={[0, 10000, 20000, 30000]} />
+                          <Line
+                            type="monotone"
+                            dataKey="views"
+                            stroke="#000"
+                            strokeWidth={2}
+                            dot={false}
+                            activeDot={{ r: 8 }}
+                          />
+                          <Line
+                            type="monotone"
+                            dataKey="hits"
+                            stroke="#ccc"
+                            strokeDasharray="5 5"
+                            strokeWidth={2}
+                            dot={false}
+                          />
+                        </LineChart>
+                      </ResponsiveContainer>
+                    </div>
+                  </div>
+
+                  {/* Bottom Cards */}
+                  <div className="row g-4">
+                    <div className="col-md-6">
+                      <div className="bg-white rounded-4 p-4 shadow-sm h-100">
+                        <h5 className="mb-4" style={{textAlign:"left"}}>Traffics Analysis</h5>
+                        <div style={{ height: "250px" }}>
+                          <ResponsiveContainer width="100%" height="100%">
+                            <BarChart data={barData} margin={{ top: 20, right: 30, left: 20, bottom: 10 }}>
+                              <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                              <XAxis dataKey="day" axisLine={false} tickLine={false} />
+                              <YAxis axisLine={false} tickLine={false} domain={[0, 400]} ticks={[0, 100, 200, 300, 400]} />
+                              <Bar dataKey="value" fill="#4285F4" radius={[10, 10, 0, 0]} barSize={30} />
+                            </BarChart>
+                          </ResponsiveContainer>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="col-md-6">
+                      {/* <div className="bg-white rounded-4 p-4 shadow-sm h-100">
+                        <h5 className="mb-4 fw-bold">Notifications</h5>
+                        <div className="d-flex flex-column gap-3">
+                          {notifications.map((notification) => (
+                            <div key={notification.id} className="d-flex align-items-start gap-3">
+                              <div
+                                className="bg-light rounded-circle d-flex align-items-center justify-content-center"
+                                style={{ width: "40px", height: "40px" }}
+                              >
+                                <span style={{ fontSize: "18px" }}>{notification.icon}</span>
+                              </div>
+                              <div className="d-flex flex-column">
+                                <div className="fw-medium">{notification.title}</div>
+                                <div className="text-secondary small">{notification.time}</div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div> */}
+
+                       <div className="notification-card">
+        <div className="card-body p-4">
+          <h1 className="notification-title mb-4">Notifications</h1>
+
+          {notificationsData.map((notification) => (
+            <div key={notification.id} className="notification-item d-flex mb-4">
+              <div className="notification-icon-container me-3">
+                {notification.icon === "bug" && (
+                  <i className="bi bi-bug-fill" style={{ color: notification.iconColor }}></i>
+                )}
+                {notification.icon === "person" && (
+                  <i className="bi bi-person-fill" style={{ color: notification.iconColor }}></i>
+                )}
+                {notification.icon === "broadcast" && (
+                  <i className="bi bi-broadcast" style={{ color: notification.iconColor }}></i>
+                )}
+              </div>
+              <div className="notification-content">
+                <div className="notification-message">{notification.message}</div>
+                <div className="notification-time">{notification.time}</div>
               </div>
             </div>
-                {/* Stats Cards */}
-                <div className="row g-4 mb-4">
-                  <div className="col-md-6 col-lg-3">
-                    <div className="bg-light rounded-4 p-3 statscol" style={{ background: "#E6F1FD !important" }}>
-                      <div className="text-secondary mb-2 countertext">Views</div>
-                      <div className="d-flex align-items-center justify-content-between">
-                        <h2 className="mb-0 fw-bold ">
-                          <CountUp end={7265} duration={2.5} separator="," className="counternumber" />
-                        </h2>
-                        <div className="d-flex align-items-center text-dark">
-                          {/* <ArrowUpRight size={16} /> */}
-                          <span>+11.01%</span>
-                          <img src={upwordicon} alt="upwordicon" className='upwordicon' />
-                        </div>
-                      </div>
+          ))}
+        </div>
+      </div>
                     </div>
                   </div>
 
-                  <div className="col-md-6 col-lg-3">
-                    <div className="bg-light rounded-4 p-3 statscol" style={{ backgroundColor: "#E6F1FD !important" }}>
-                      <div className="text-secondary mb-2 countertext">Hits</div>
-                      <div className="d-flex align-items-center justify-content-between">
-                        <h2 className="mb-0 fw-bold">
-                          <CountUp end={3671} duration={2.5} separator="," className="counternumber" />
-                        </h2>
-                        <div className="d-flex align-items-center text-dark">
-                          {/* <ArrowDownRight size={16} /> */}
-                          <span>-0.03%</span>
-                          <img src={downwordicon} alt="downwordicon" className='downwordicon' />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                </>)
+              }
 
-                  <div className="col-md-6 col-lg-3">
-                    <div className="bg-light rounded-4 p-3 statscol" style={{ backgroundColor: "#E6F1FD !important" }}>
-                      <div className="text-secondary mb-2 countertext">Total Profit</div>
-                      <div className="d-flex align-items-center justify-content-between">
-                        <h2 className="mb-0 fw-bold">
-                          <CountUp end={156} duration={2.5} separator="," className="counternumber" />
-                        </h2>
-                        <div className="d-flex align-items-center text-dark">
-                          <span>+15.03%</span>
-                          {/* <ArrowUpRight size={16} /> */}
-                          <img src={downwordicon} alt="downwordicon" className='downwordicon' />
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col-md-6 col-lg-3">
-                    <div className="bg-light rounded-4 p-3 statscol" style={{ backgroundColor: "#E6F1FD !important" }}>
-                      <div className="text-secondary mb-2 countertext">Total Bookings</div>
-                      <div className="d-flex align-items-center justify-content-between">
-                        <h2 className="mb-0 fw-bold">
-                          <CountUp end={2318} duration={2.5} separator="," className="counternumber" />
-                        </h2>
-                        <div className="d-flex align-items-center text-dark">
-                          {/* <ArrowUpRight size={16} /> */}
-                          <span>+6.08%</span>
-                          <img src={upwordicon} alt="upwordicon" className='upwordicon' />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Line Chart */}
-                <div className="bg-white rounded-4 p-3 mb-4">
-                  <div style={{ height: "300px" }}>
-                    <ResponsiveContainer width="100%" height="100%">
-                      <LineChart data={lineData} margin={{ top: 20, right: 30, left: 20, bottom: 10 }}>
-                        <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                        <XAxis dataKey="name" axisLine={false} tickLine={false} />
-                        <YAxis axisLine={false} tickLine={false} domain={[0, 30000]} ticks={[0, 10000, 20000, 30000]} />
-                        <Line
-                          type="monotone"
-                          dataKey="views"
-                          stroke="#000"
-                          strokeWidth={2}
-                          dot={false}
-                          activeDot={{ r: 8 }}
-                        />
-                        <Line
-                          type="monotone"
-                          dataKey="hits"
-                          stroke="#ccc"
-                          strokeDasharray="5 5"
-                          strokeWidth={2}
-                          dot={false}
-                        />
-                      </LineChart>
-                    </ResponsiveContainer>
-                  </div>
-                </div>
-
-                {/* Bottom Cards */}
-                <div className="row g-4">
-                  <div className="col-md-6">
-                    <div className="bg-white rounded-4 p-4 shadow-sm h-100">
-                      <h5 className="mb-4">Traffics Analysis</h5>
-                      <div style={{ height: "250px" }}>
-                        <ResponsiveContainer width="100%" height="100%">
-                          <BarChart data={barData} margin={{ top: 20, right: 30, left: 20, bottom: 10 }}>
-                            <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                            <XAxis dataKey="day" axisLine={false} tickLine={false} />
-                            <YAxis axisLine={false} tickLine={false} domain={[0, 400]} ticks={[0, 100, 200, 300, 400]} />
-                            <Bar dataKey="value" fill="#4285F4" radius={[10, 10, 0, 0]} barSize={30} />
-                          </BarChart>
-                        </ResponsiveContainer>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col-md-6">
-                    <div className="bg-white rounded-4 p-4 shadow-sm h-100">
-                      <h5 className="mb-4">Notifications</h5>
-                      <div className="d-flex flex-column gap-3">
-                        {notifications.map((notification) => (
-                          <div key={notification.id} className="d-flex align-items-start">
-                            <div
-                              className="bg-light rounded-circle p-2 me-3 d-flex align-items-center justify-content-center"
-                              style={{ width: "40px", height: "40px" }}
-                            >
-                              <span>{notification.icon}</span>
-                            </div>
-                            <div>
-                              <div className="fw-medium">{notification.title}</div>
-                              <div className="text-secondary small">{notification.time}</div>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </>)
-            }
-
-            {
-              activeTab === "leaderboard" && (<>
-                <table className="table table-hover">
-                  <thead>
-                    <tr>
-                      <th scope="col">Rank</th>
-                      <th scope="col">Hall</th>
-                      <th scope="col">Views</th>
-                      <th scope="col">Hits</th>
-                      <th scope="col">Bookings</th>
-                      <th scope="col">Profit</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {
-                      leaderboard.map((item) => (
-                        <tr scope="row" key={item.id}>
-                          <td className="p-4">{item.rank}</td>
-                          <td className="p-4">{item.hallname}</td>
-                          <td className="p-4">{item.views}</td>
-                          <td className="p-4">{item.hits}</td>
-                          <td className="p-4">{item.bookings}</td>
-                          <td className="p-4">{item.profit}</td>
-                        </tr>
-                      ))
-                    }
-                  </tbody>
-                </table>
-              </>)
-            }
+              {
+                activeTab === "leaderboard" && (<>
+                  <table className="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">Rank</th>
+                        <th scope="col">Hall</th>
+                        <th scope="col">Views</th>
+                        <th scope="col">Hits</th>
+                        <th scope="col">Bookings</th>
+                        <th scope="col">Profit</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {
+                        leaderboard.map((item) => (
+                          <tr scope="row" key={item.id}>
+                            <td className="p-4">{item.rank}</td>
+                            <td className="p-4">{item.hallname}</td>
+                            <td className="p-4">{item.views}</td>
+                            <td className="p-4">{item.hits}</td>
+                            <td className="p-4">{item.bookings}</td>
+                            <td className="p-4">{item.profit}</td>
+                          </tr>
+                        ))
+                      }
+                    </tbody>
+                  </table>
+                </>)
+              }
 
 
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    </div>
     </div>
   )
 }

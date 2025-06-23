@@ -14,24 +14,80 @@ import Reviews from './Dashbaord/Reviews.jsx'
 import Siderbar from './Dashbaord/Siderbar.jsx'
 import Hallhistory from './Dashbaord/Hallhistory.Jsx'
 import Packages from './Dashbaord/Packages.jsx'
+import Login from './Login.jsx';
+import SignUp from './Signup.jsx'
 const router = createBrowserRouter([
-  {
+
+    {
     path: "/",
     element:
       <div>
-        <Header />
-        
-        <div className='container bg-light bg-opacity-50 min-vh-100 py-4'>
-        <div className='row g-4'>
-          <div className='col-lg-3 col-md-3'>
-            <Siderbar />
-          </div>
-          <div className='col-lg-9 col-md-9'>
-
-          <App />
+        <div className='container-fluid appbackground'>
+          <div className='container'>
+            <div className='row g-4'>
+              <div className='col-lg-12 col-md-12'>
+                <Login />
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
+  },
+
+  {
+    path: "/login",
+    element:
+      <div>
+        <div className='container-fluid appbackground'>
+          <div className='container'>
+            <div className='row g-4'>
+              <div className='col-lg-12 col-md-12'>
+                <Login />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  },
+
+   {
+    path: "/signup",
+    element:
+      <div>
+        <div className='container-fluid appbackground'>
+          <div className='container'>
+            <div className='row g-4'>
+              <div className='col-lg-12 col-md-12'>
+                <SignUp />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  },
+
+  {
+    path: "/analytics",
+    element:
+      <div>
+        <Header />
+        <div className='container-fluid appbackground'>
+          <div className='container bg-opacity-50 min-vh-100 py-4'>
+            <div className='row g-4'>
+              <div className='col-lg-3 col-md-3'>
+                <Siderbar />
+              </div>
+              <div className='col-lg-9 col-md-9'>
+
+                <App />
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
   },
   {
@@ -39,18 +95,20 @@ const router = createBrowserRouter([
     element:
       <div>
         <Header />
-        
-        <div className='container bg-light bg-opacity-50 min-vh-100 py-4'>
-        <div className='row g-4'>
-          <div className='col-lg-3 col-md-3'>
-            <Siderbar />
-          </div>
-          <div className='col-lg-9 col-md-9'>
+        <div className='container-fluid appbackground'>
+          <div className='container bg-opacity-50 min-vh-100 py-4'>
+            <div className='row g-4'>
+              <div className='col-lg-3 col-md-3'>
+                <Siderbar />
+              </div>
+              <div className='col-lg-9 col-md-9'>
 
-          <App />
+                <App />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+
       </div>
   },
   {
@@ -58,14 +116,16 @@ const router = createBrowserRouter([
     element:
       <div>
         <Header />
-        <div className='container bg-light bg-opacity-50 min-vh-100 py-4'>
-        <div className='row g-4'>
-          <div className='col-lg-3 col-md-3'>
-            <Siderbar />
-          </div>
-          <div className='col-lg-9 col-md-9'>
+        <div className='container-fluid appbackground'>
+        <div className='container bg-opacity-50 min-vh-100 py-4'>
+          <div className='row g-4'>
+            <div className='col-lg-3 col-md-3'>
+              <Siderbar />
+            </div>
+            <div className='col-lg-9 col-md-9'>
 
-          <Calenderview />
+              <Calenderview />
+            </div>
           </div>
         </div>
       </div>
@@ -75,34 +135,38 @@ const router = createBrowserRouter([
     path: "/listings",
     element:
       <div>
-      <Header />
-      <div className='container bg-light bg-opacity-50 min-vh-100 py-4'>
-        <div className='row g-4'>
-          <div className='col-lg-3 col-md-3'>
-            <Siderbar />
-          </div>
-          <div className='col-lg-9 col-md-9'>
+        <Header />
+         <div className='container-fluid appbackground'>
+        <div className='container bg-opacity-50 min-vh-100 py-4'>
+          <div className='row g-4'>
+            <div className='col-lg-3 col-md-3'>
+              <Siderbar />
+            </div>
+            <div className='col-lg-9 col-md-9'>
 
-            <Listing />
+              <Listing />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      </div>
   },
-    
+
   {
     path: "/messages",
     element:
       <div>
         <Header />
-        <div className='container bg-light bg-opacity-50 min-vh-100 py-4'>
-        <div className='row g-4'>
-          <div className='col-lg-3 col-md-3'>
-            <Siderbar />
-          </div>
-          <div className='col-lg-9 col-md-9'>
+         <div className='container-fluid appbackground'>
+        <div className='container bg-opacity-50 min-vh-100 py-4'>
+          <div className='row g-4'>
+            <div className='col-lg-3 col-md-3'>
+              <Siderbar />
+            </div>
+            <div className='col-lg-9 col-md-9'>
 
-            <Inbox />
+              <Inbox />
+            </div>
           </div>
         </div>
       </div>
@@ -113,7 +177,8 @@ const router = createBrowserRouter([
     element:
       <div>
         <Header />
-        <div className='container bg-light bg-opacity-50 min-vh-100 py-4'>
+        <div className='container-fluid appbackground'>
+        <div className='container bg-opacity-50 min-vh-100 py-4'>
           <div className='row g-4'>
             <div className='col-lg-3 col-md-3'>
               <Siderbar />
@@ -125,13 +190,15 @@ const router = createBrowserRouter([
           </div>
         </div>
       </div>
+      </div>
   },
   {
     path: "/history",
     element:
       <div>
         <Header />
-        <div className='container bg-light bg-opacity-50 min-vh-100 py-4'>
+        <div className='container-fluid appbackground'>
+        <div className='container bg-opacity-50 min-vh-100 py-4'>
           <div className='row g-4'>
             <div className='col-lg-3 col-md-3'>
               <Siderbar />
@@ -143,13 +210,15 @@ const router = createBrowserRouter([
           </div>
         </div>
       </div>
+      </div>
   },
   {
     path: "/Packages",
     element:
       <div>
         <Header />
-        <div className='container bg-light bg-opacity-50 min-vh-100 py-4'>
+        <div className='container-fluid appbackground'>
+        <div className='container bg-opacity-50 min-vh-100 py-4'>
           <div className='row g-4'>
             <div className='col-lg-3 col-md-3'>
               <Siderbar />
@@ -160,6 +229,7 @@ const router = createBrowserRouter([
             </div>
           </div>
         </div>
+      </div>
       </div>
   },
 ]);

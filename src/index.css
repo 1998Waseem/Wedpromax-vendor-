@@ -2,3 +2,22 @@
   font-family: "Poppins", sans-serif;
   font-size: 15px;
 }
+
+.appbackground{
+  background-color: #FFF8F2;
+}
+
+.card{
+  background: #F5F5F5;
+  border-color: #F5F5F5;
+}
+
+textarea.form-control {
+    border: 1px solid #000;
+}
+
+.form-select:focus {
+    border-color: transparent;
+    outline: none;
+    box-shadow: none;
+}

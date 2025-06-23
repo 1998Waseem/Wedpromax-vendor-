@@ -1,6 +1,7 @@
 import React from 'react';
 import { TiStarHalfOutline } from "react-icons/ti";
 import { TiStarFullOutline } from "react-icons/ti";
+import profileavatar from '../assets/images/profileavatar.svg'
 import './Review.css'
 const reviews = [
     {
@@ -39,7 +40,7 @@ const StarRating = ({ rating }) => {
 
 const Reviews = () => (
     <div>
-        <div className="card rounded-4 shadow-sm p-3">
+        <div className="card rounded-4 shadow-sm p-3" style={{background:"#F5F5F5"}}>
             <div className="card-body p-4">
                 <div className="d-flex justify-content-between align-items-center mb-4">
                     <h5 className="fw-bold mb-0">Reviews</h5>
@@ -52,10 +53,10 @@ const Reviews = () => (
 
                             {reviews.map((review, index) => (
                                 <div key={index} className="review-card">
-                                    <img src={review.profileImage} alt={review.name} className="profile-img" />
+                                    <img src={profileavatar} alt={review.name} className="profile-img" />
                                     <div>
-                                        <strong>{review.name}</strong> <StarRating rating={review.rating} />
-                                        <p>"{review.review}"</p>
+                                        <strong style={{fontSize:"18px",fontWeight:"600"}}>{review.name}</strong> <StarRating rating={review.rating} />
+                                        <p style={{fontSize:"12px",fontWeight:"400"}}>"{review.review}"</p>
                                     </div>
                                 </div>
                             ))}

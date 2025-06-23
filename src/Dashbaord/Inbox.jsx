@@ -5,12 +5,12 @@ import './inbox.css'
 const Inbox = () => {
     return (
         <>
-            <div className="card rounded-4 shadow-sm h-100">
+            <div className="card rounded-4 shadow-sm h-100"  style={{background:"#F5F5F5"}}>
             <div className="card-body p-4">
                 <div className='container'>
                     <div className="row gx-4">
                         <div className="col-md-12 col-lg-12 p-4 ">
-                            <h4>Chats</h4>
+                            <h4 className='mb-4'>Chats</h4>
 
                             <div className='allchat d-flex justify-content-between'>
                                 <div className='profileimgwithmessage '>
@@ -19,8 +19,8 @@ const Inbox = () => {
                                     <p className='message'>This is my message </p>
                                 </div>
 
-                                <div className='time'>
-                                    <p>7:21AM</p>
+                                <div className='timediv'>
+                                    <p className='time'>7:21AM</p>
                                 </div>
                             </div>
 
@@ -31,8 +31,8 @@ const Inbox = () => {
                                     <p className='message'>This is my message </p>
                                 </div>
 
-                                <div className='time'>
-                                    <p>7:21AM</p>
+                               <div className='timediv'>
+                                    <p className='time'>7:21AM</p>
                                 </div>
                             </div>
 
@@ -43,8 +43,8 @@ const Inbox = () => {
                                     <p className='message'>This is my message </p>
                                 </div>
 
-                                <div className='time'>
-                                    <p>7:21AM</p>
+                               <div className='timediv'>
+                                    <p className='time'>7:21AM</p>
                                 </div>
                             </div>
 
@@ -55,8 +55,8 @@ const Inbox = () => {
                                     <p className='message'>This is my message </p>
                                 </div>
 
-                                <div className='time'>
-                                    <p>7:21AM</p>
+                               <div className='timediv'>
+                                    <p className='time'>7:21AM</p>
                                 </div>
                             </div>
 
@@ -67,8 +67,8 @@ const Inbox = () => {
                                     <p className='message'>This is my message </p>
                                 </div>
 
-                                <div className='time'>
-                                    <p>7:21AM</p>
+                               <div className='timediv'>
+                                    <p className='time'>7:21AM</p>
                                 </div>
                             </div>
 
@@ -79,8 +79,8 @@ const Inbox = () => {
                                     <p className='message'>This is my message </p>
                                 </div>
 
-                                <div className='time'>
-                                    <p>7:21AM</p>
+                               <div className='timediv'>
+                                    <p className='time'>7:21AM</p>
                                 </div>
                             </div>
 
@@ -91,8 +91,8 @@ const Inbox = () => {
                                     <p className='message'>This is my message </p>
                                 </div>
 
-                                <div className='time'>
-                                    <p>7:21AM</p>
+                               <div className='timediv'>
+                                    <p className='time'>7:21AM</p>
                                 </div>
                             </div>
 
@@ -103,8 +103,8 @@ const Inbox = () => {
                                     <p className='message'>This is my message </p>
                                 </div>
 
-                                <div className='time'>
-                                    <p>7:21AM</p>
+                               <div className='timediv'>
+                                    <p className='time'>7:21AM</p>
                                 </div>
                             </div>
 
@@ -115,8 +115,8 @@ const Inbox = () => {
                                     <p className='message'>This is my message </p>
                                 </div>
 
-                                <div className='time'>
-                                    <p>7:21AM</p>
+                               <div className='timediv'>
+                                    <p className='time'>7:21AM</p>
                                 </div>
                             </div>
 
@@ -127,8 +127,8 @@ const Inbox = () => {
                                     <p className='message'>This is my message </p>
                                 </div>
 
-                                <div className='time'>
-                                    <p>7:21AM</p>
+                               <div className='timediv'>
+                                    <p className='time'>7:21AM</p>
                                 </div>
                             </div>
 
@@ -139,8 +139,8 @@ const Inbox = () => {
                                     <p className='message'>This is my message </p>
                                 </div>
 
-                                <div className='time'>
-                                    <p>7:21AM</p>
+                               <div className='timediv'>
+                                    <p className='time'>7:21AM</p>
                                 </div>
                             </div>
 

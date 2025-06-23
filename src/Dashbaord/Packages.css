@@ -1,0 +1,20 @@
+.d-flex.mb-4.p-1.border.rounded-pill {
+    border-color: #0D6EFD !important;
+}
+
+.pp{
+    position: relative;
+    right: 100px;
+    font-size: 18px;
+    font-weight: 400 !important;
+}
+
+.pn{
+    font-size: 18px;
+    font-weight: 400 !important;
+}
+
+.accordion-body.p-4 {
+    background: #F5F5F5;
+}
+

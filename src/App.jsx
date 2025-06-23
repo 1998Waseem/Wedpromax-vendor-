@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-    <h1 className='mt-5 text-center'><Factsfigure /></h1>
+    <div className='text-center'><Factsfigure /></div>
     </>
   )
 }
